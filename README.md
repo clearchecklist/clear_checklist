@@ -1,4 +1,4 @@
-# CLEAR CHECKLIST
+# CLEAR CHECKLIST REPOSITORY
 A repository to allow the radiomics community to comment on the CLEAR checklist items.
 
 # ABOUT THE CHECKLIST
