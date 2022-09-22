@@ -8,4 +8,4 @@ We aimed to develop a single documentation standard for radiomics research that 
 # PURPOSE OF THIS REPO
 We hope that this checklist will stimulate a discussion of the proposed items. We encourage the community to provide us with their views about how this checklist can be improved in the future. 
 # HOW TO USE THIS REPOSITORY?
--
+-Under the "Discussions", create a new discussion referring to item with number
