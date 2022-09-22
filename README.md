@@ -2,8 +2,8 @@
 A repository to allow the radiomics community to comment on the CLEAR checklist items.
 
 # ABOUT THE CHECKLIST
--Authors =  ...
--Publication = ...
+-Authors =  
+-Publication =  
 # PURPOSE OF CHECKLIST
 We aimed to develop a single documentation standard for radiomics research that can guide authors and reviewers. 
 # PURPOSE OF THIS REPO
