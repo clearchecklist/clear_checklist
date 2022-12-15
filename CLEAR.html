@@ -17,12 +17,30 @@
 	h2 {
   text-align: left;
 }
+h4 { font-weight: normal; }
+button {  
+background-color: lightblue;  
+color: black;  
+font-size: 15px;  
+margin: auto;  
+}  
+p{  
+font-size: 25px;  
+} 
+@media print {
+  #printPageButton {
+    display: none;
+  }
+}
   </style>
 </head>
 <body>
+<div><button id="printPageButton" onClick="window.print()" >Print Checklist 
+		</button></div>	  
   <h1>CLEAR Checklist</h1>
-	<h4>Note: Use the checklist in conjunction with the main text for clarification of all items.<br>Yes, details provided; No, details not provided; N/a, not applicable; Page, page number</h4>
 
+	<h4><b>Note</b>: Use the checklist in conjunction with the main text for clarification of all items.<br>Yes, details provided; No, details not provided; N/a, not applicable; Page, page number</h4>
+</body>
 
 
 
@@ -649,10 +667,13 @@
         <td><input type="checkbox"></td>
         <td><input type="text" size="5"></td>
 		</tr>
+	</table>
  
-		<body><button onClick="window.print()">Print Checklist 
-		</button></body>
 		
 </body>
-	  
+
+<h1> </h1>
+
+<div><button id="printPageButton" onClick="window.print()" >Print Checklist 
+		</button></div>	  
 	  
