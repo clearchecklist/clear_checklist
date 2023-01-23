@@ -66,16 +66,20 @@
 
     .tooltip {
       position: relative;
-      margin-left: 10px;
+      margin-right: 10px;
       display: inline;
       background: #999;
       border: none;
-      padding: 2px 7px 2px 7px;
+      padding: 2px 3px 2px 7px;
       color: #EEE;
       box-shadow: 1px 1px 5px #B6B6B6;
       border-radius: 3px;
-      text-shadow: 1px 1px 1px #333;
+      text-shadow: none;
       cursor: pointer;
+    }
+
+    .tooltip:hover {
+      background: #666;
     }
 
     .tooltip .tooltiptext {
@@ -87,8 +91,7 @@
       text-align: left;
       font-size: small;
       border-radius: 6px;
-      padding: 10px 15px;
-      
+      padding: 10px 15px;      
       /* Position the tooltip */
       position: absolute;
       z-index: 1;
@@ -107,6 +110,10 @@
       .basic-grey {
         background: #FFF;
         border: 0px;
+        font-size: small;
+      }
+      .tooltip {
+        display: none;
       }
     }
 
@@ -146,10 +153,10 @@
       <td>&nbsp;</td>
       <td>1</td>
       <td>
-        Relevant title, specifying the radiomic methodology
         <div class="tooltip">?
           <span class="tooltiptext">Indicate the use of radiomics in the title. Specify the radiomic technique (e.g., hand-crafted, engineered, deep, delta, etc.), modality (e.g., computed tomography [CT], magnetic resonance imaging [MRI], ultrasound), significant aspects of the scans (e.g., unenhanced, dynamic), use of machine learning (e.g., machine learning-based), external validation, and multi-center design.</span>
         </div>
+        Relevant title, specifying the radiomic methodology
       </td>
       <td><input type="checkbox"></td>
       <td><input type="checkbox"></td>
