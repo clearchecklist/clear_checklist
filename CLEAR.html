@@ -3,671 +3,651 @@
 
 <head>
   <title>CheckList for EvaluAtion of Radiomics (CLEAR checklist)</title>
-  <style>
-    table {
+  <meta charset="UTF-8">
+  <meta name="dcterms.date" content="2023-01-23">
+  
+  <style type="text/css">
+
+    /* Basic Grey */
+    .basic-grey {
+      margin-left:auto;
+      margin-right:auto;
+      max-width: 800px;
+      background: #F7F7F7;
+      padding: 25px 15px 25px 10px;
+      color: #555;
+      font-family: Arial, Helvetica, sans-serif;
+      text-shadow: 1px 1px 1px #FFF;
+      border:1px solid #E4E4E4;
+    }
+    .basic-grey table {
       border-collapse: collapse;
     }
-    td, th {
+    .basic-grey td {
       border: 0.5px solid;
       padding: 5px;
     }
-	div {
-  column-width: 100px;
-	}
-	h2 {
-  text-align: left;
-}
+    .section-head {
+      font-weight: bold;
+    }
+    .subsection-head {
+      font-style: italic;
+    }
+    .basic-grey th {
+      border: 0.5px solid;
+      padding: 5px;
+      font-size: large;
+    }
+    .basic-grey div {
+      column-width: 100px;
+    }
+    .basic-grey h2 {
+      text-align: left;
+    }
+    .basic-grey h4 {
+      font-weight: normal;
+    }
+    .basic-grey button {
+        background: #E27575;
+        border: none;
+        padding: 5px 25px 5px 25px;
+        color: #FFF;
+        box-shadow: 1px 1px 5px #B6B6B6;
+        border-radius: 3px;
+        text-shadow: 1px 1px 1px #9E3F3F;
+        cursor: pointer;
+    }
+    .basic-grey button:hover {
+        background: #CF7A7A
+    }
+    input[type=text] {
+      width: 30px;
+    }
+    
+    @media print {
+      #printPageButton {
+        display: none;
+      }
+      .basic-grey {
+        background: #FFF;
+        border: 0px;
+      }
+    }
 
-h4 { font-weight: normal; }
-
-button {  
-background-color: lightblue;  
-color: black;  
-font-size: 15px;  
-margin: auto;  
-}  
-p{  
-font-size: 25px;  
-} 
-@media print {
-  #printPageButton {
-    display: none;
-  }
-}
   </style>
+
 </head>
-<body>
-<div><button id="printPageButton" onClick="window.print()" >Print Checklist 
-		</button></div>	  
-  <h1>CLEAR Checklist</h1>
 
-	<h4><b>Note</b>: Use the checklist in conjunction with the main text for clarification of all items.<br>Yes, details provided; No, details not provided; n/a, not applicable; Page, page number</h4>
-</body>
+<body class="basic-grey">
 
+<button id="printPageButton" onClick="window.print()" >Print Checklist</button>
+<h1>CLEAR Checklist</h1>
 
+<p>
+  <b>Note</b>: Use the checklist in conjunction with the main text for clarification of all items.<br>
+  Yes, details provided; No, details not provided; n/a, not applicable; Page, page number
+</p>
 
-  <table>
-  
-    <thead>
+<table>
+
+  <thead>
+    <tr>
+      <th>Section</th>
+      <th>No.</th>
+      <th>Item</th>
+      <th>Yes</th>
+      <th>No</th>
+      <th>n/a</th>
+      <th>Page</th>
+    </tr>
+  </thead>
+
+  <tbody>
+	  <tr>
+      <td colspan="7" class="section-head">Title</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>1</td>
+      <td>Relevant title, specifying the radiomic methodology</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+	  <tr>
+      <td colspan="7" class="section-head">Abstract</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>2</td>
+      <td>Structured summary with relevant information</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td colspan="7" class="section-head">Keywords</td>
+    </tr>
+	  <tr>
+      <td>&nbsp;</td>
+      <td>3</td>
+      <td>Relevant keywords for radiomics</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+	  <tr>
+      <td colspan="7" class="section-head">Introduction</td>
+    </tr>
+	  <tr>
+      <td>&nbsp;</td>
+      <td>4</td>
+      <td>Scientific or clinical background</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>5</td>
+      <td>Rationale for using a radiomic approach</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>6</td>
+      <td>Study objective(s)</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+	  <tr>
+      <td colspan="7" class="section-head">Method</td>
+    </tr>
+	  <tr>
+      <td class="subsection-head">Study Design</td>
+      <td>7</td>
+      <td>Adherence to guidelines or checklists (e.g., CLEAR checklist)</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+	  <tr>
+      <td>&nbsp;</td>
+      <td>8</td>
+      <td>Ethical details (e.g., approval, consent, data protection)</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+	  <tr>
+      <td>&nbsp;</td>
+      <td>9</td>
+      <td>Study nature (e.g., retrospective, prospective)</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+	  <tr>
+      <td>&nbsp;</td>
+      <td>10</td>
+      <td>Eligibility criteria</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+	  <tr>
+      <td>&nbsp;</td>
+      <td>11</td>
+      <td>Flowchart for technical pipeline</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td class="subsection-head">Data</i></td>
+      <td>12</td>
+      <td>Data source (e.g., private, public)</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>13</td>
+      <td>Sample size calculation</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>14</td>
+      <td>Data overlap</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>15</td>
+      <td>Data split methodology</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>16</td>
+      <td>Imaging protocol (i.e., image acquisition and processing)</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>17</td>
+      <td>Definition of non-radiomic predictor variables</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+	  <tr>
+      <td>&nbsp;</td>
+      <td>18</td>
+      <td>Definition of the reference standard (i.e., outcome variable)</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+	  <tr>
+      <td class="subsection-head">Segmentation</i></td>
+      <td>19</td>
+      <td>Segmentation strategy</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>	  
+	  <tr>
+      <td>&nbsp;</td>
+      <td>20</td>
+      <td>Details of operators performing segmentation</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+	  <tr>
+      <td class="subsection-head">Pre-processing</i></td>
+      <td>21</td>
+      <td>Image pre-processing details</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+	  <tr>
+      <td>&nbsp;</td>
+      <td>22</td>
+      <td>Resampling method and its parameters</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+	  <tr>
+      <td>&nbsp;</td>
+      <td>23</td>
+      <td>Discretization method and its parameters</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
       <tr>
-        <th>Section</th>
-        <th>No.</th>
-        <th>Item</th>
-        <th>Yes</th>
-        <th>No</th>
-        <th>n/a</th>
-        <th>Page</th>
-      </tr>
-    </thead>
-    <tbody>
-	<tr>
-        <td><b>Title<b></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>1</td>
-        <td>Relevant title, specifying the radiomic methodology</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  <tr>
-        <td><b>Abstract<b></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>2</td>
-        <td>Structured summary with relevant information</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"> </td>
-      </tr>
-	  	<tr>
-        <td><b>Keywords<b></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-	  <tr>
-        <td></td>
-        <td>3</td>
-        <td>Relevant keywords for radiomics</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  <tr>
-        <td><b>Introduction<b></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-	  <tr>
-        <td></td>
-        <td>4</td>
-        <td>Scientific or clinical background</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td></td>
-        <td>5</td>
-        <td>Rationale for using a radiomic approach</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td></td>
-        <td>6</td>
-        <td>Study objective(s)</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-
-	  <tr>
-        <td><b>Method<b></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-	  <tr>
-        <td><i>Study Design</i></td>
-        <td>7</td>
-        <td>Adherence to guidelines or checklists (e.g., CLEAR checklist)</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  
-	  <tr>
-        <td></td>
-        <td>8</td>
-        <td>Ethical details (e.g., approval, consent, data protection)</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  
-	  <tr>
-        <td></td>
-        <td>9</td>
-        <td>Study nature (e.g., retrospective, prospective)</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  
-	  <tr>
-        <td></td>
-        <td>10</td>
-        <td>Eligibility criteria</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  
-	  	  <tr>
-        <td></td>
-        <td>11</td>
-        <td>Flowchart for technical pipeline</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  	  <tr>
-        <td><i>Data</i></td>
-        <td>12</td>
-        <td>Data source (e.g., private, public)</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  	  <tr>
-        <td></td>
-        <td>13</td>
-        <td>Sample size calculation</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  	  <tr>
-        <td></td>
-        <td>14</td>
-        <td>Data overlap</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  	  <tr>
-        <td></td>
-        <td>15</td>
-        <td>Data split methodology</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  
-	  	  	  <tr>
-        <td></td>
-        <td>16</td>
-        <td>Imaging protocol (i.e., image acquisition and processing)</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  
-	  	  	  	  <tr>
-        <td></td>
-        <td>17</td>
-        <td>Definition of non-radiomic predictor variables</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  
-	  <tr>
-        <td></td>
-        <td>18</td>
-        <td>Definition of the reference standard (i.e., outcome variable)</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  
-	  <tr>
-        <td><i>Segmentation</i></td>
-        <td>19</td>
-        <td>Segmentation strategy</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  
-	  <tr>
-        <td></td>
-        <td>20</td>
-        <td>Details of operators performing segmentation</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  
-	  <tr>
-        <td><i>Pre-processing</i></td>
-        <td>21</td>
-        <td>Image pre-processing details</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  <tr>
-        <td></td>
-        <td>22</td>
-        <td>Resampling method and its parameters</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  <tr>
-        <td></td>
-        <td>23</td>
-        <td>Discretization method and its parameters</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td></td>
-        <td>24</td>
-        <td>Image types (e.g., original, filtered, transformed)</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td><i>Feature extraction</i></td>
-        <td>25</td>
-        <td>Feature extraction method</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td></td>
-        <td>26</td>
-        <td>Feature classes</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td></td>
-        <td>27</td>
-        <td>Number of features</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td></td>
-        <td>28</td>
-        <td>Default configuration statement for remaining parameters</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td><i>Data preparation</i></td>
-        <td>29</td>
-        <td>Handling of missing data</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td></td>
-        <td>30</td>
-        <td>Handling of confounders</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td></td>
-        <td>31</td>
-        <td>Details of class imbalance</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td></td>
-        <td>32</td>
-        <td>Details of segmentation reliability analysis</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td></td>
-        <td>33</td>
-        <td>Feature scaling details (e.g., normalization, standardization)</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td></td>
-        <td>34</td>
-        <td>Dimension reduction details</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td><i>Modeling</i></td>
-        <td>35</td>
-        <td>Algorithm details</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td></td>
-        <td>36</td>
-        <td>Training and tuning details</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td></td>
-        <td>37</td>
-        <td>Model selection strategy</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td><i>Evaluation</i></td>
-        <td>38</td>
-        <td>Testing technique (e.g., internal, external)</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td></td>
-        <td>39</td>
-        <td>Performance metrics and rationale for choosing</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td></td>
-        <td>40</td>
-        <td>Uncertainty evaluation and measures (e.g., confidence intervals)</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td></td>
-        <td>41</td>
-        <td>Statistical performance comparison (e.g., DeLong test)</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td></td>
-        <td>42</td>
-        <td>Comparison with non-radiomic and combined methods</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td></td>
-        <td>43</td>
-        <td>Interpretability and explainability methods</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td><b>Results<b></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-	  	  <tr>
-        <td></td>
-        <td>44</td>
-        <td>Baseline demographic and clinical characteristics</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td></td>
-        <td>45</td>
-        <td>Flowchart for eligibility criteria</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td></td>
-        <td>46</td>
-        <td>Feature statistics (e.g., reproducibility, feature selection)</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td></td>
-        <td>47</td>
-        <td>Model performance evaluation</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td></td>
-        <td>48</td>
-        <td>Comparison with non-radiomic and combined approaches</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  
-	  	  <tr>
-        <td><b>Discussion<b></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-	  
-	  	  <tr>
-        <td></td>
-        <td>49</td>
-        <td>Overview of important findings</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td></td>
-        <td>50</td>
-        <td>Previous works with differences from the current study</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td></td>
-        <td>51</td>
-        <td>Practical implications</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td></td>
-        <td>52</td>
-        <td>Strengths and limitations (e.g., bias and generalizability issues)</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  	  <tr>
-        <td><b>Open Science<b></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-	  
-	  	  <tr>
-        <td><i>Data availability</i></td>
-        <td>53</td>
-        <td>Sharing images along with segmentation data</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td></td>
-        <td>54</td>
-        <td>Sharing radiomic feature data</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-
-	  	  <tr>
-        <td><i>Code availability</i></td>
-        <td>55</td>
-        <td>Sharing pre-processing scripts or settings</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td></td>
-        <td>56</td>
-        <td>Sharing source code for modeling</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td><i>Model availability</i></td>
-        <td>57</td>
-        <td>Sharing final model files</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
-      </tr>
-	  	  <tr>
-        <td></td>
-        <td>58</td>
-        <td>Sharing a ready-to-use system</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="text" size="5"></td>
+      <td>&nbsp;</td>
+      <td>24</td>
+      <td>Image types (e.g., original, filtered, transformed)</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td class="subsection-head">Feature extraction</i></td>
+      <td>25</td>
+      <td>Feature extraction method</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr> 
+    <tr>
+      <td>&nbsp;</td>
+      <td>26</td>
+      <td>Feature classes</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>27</td>
+      <td>Number of features</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>28</td>
+      <td>Default configuration statement for remaining parameters</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td class="subsection-head">Data preparation</td>
+      <td>29</td>
+      <td>Handling of missing data</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>30</td>
+      <td>Handling of confounders</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>31</td>
+      <td>Details of class imbalance</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>32</td>
+      <td>Details of segmentation reliability analysis</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>33</td>
+      <td>Feature scaling details (e.g., normalization, standardization)</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>34</td>
+      <td>Dimension reduction details</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td class="subsection-head">Modeling</td>
+      <td>35</td>
+      <td>Algorithm details</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>36</td>
+      <td>Training and tuning details</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>37</td>
+      <td>Model selection strategy</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td class="subsection-head">Evaluation</td>
+      <td>38</td>
+      <td>Testing technique (e.g., internal, external)</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>39</td>
+      <td>Performance metrics and rationale for choosing</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>40</td>
+      <td>Uncertainty evaluation and measures (e.g., confidence intervals)</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>41</td>
+      <td>Statistical performance comparison (e.g., DeLong test)</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>42</td>
+      <td>Comparison with non-radiomic and combined methods</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>43</td>
+      <td>Interpretability and explainability methods</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td colspan="7" class="section-head">Results</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>44</td>
+      <td>Baseline demographic and clinical characteristics</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>45</td>
+      <td>Flowchart for eligibility criteria</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>46</td>
+      <td>Feature statistics (e.g., reproducibility, feature selection)</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>47</td>
+      <td>Model performance evaluation</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr> 
+      <td>&nbsp;</td>
+      <td>48</td>
+      <td>Comparison with non-radiomic and combined approaches</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td colspan="7" class="section-head">Discussion</td>   
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>49</td>
+      <td>Overview of important findings</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>50</td>
+      <td>Previous works with differences from the current study</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>51</td>
+      <td>Practical implications</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>52</td>
+      <td>Strengths and limitations (e.g., bias and generalizability issues)</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td colspan="7" class="section-head">Open Science</td>
+    </tr>
+    <tr>
+      <td class="subsection-head">Data availability</td>
+      <td>53</td>
+      <td>Sharing images along with segmentation data</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>54</td>
+      <td>Sharing radiomic feature data</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td class="subsection-head">Code availability</td>
+      <td>55</td>
+      <td>Sharing pre-processing scripts or settings</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>56</td>
+      <td>Sharing source code for modeling</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td class="subsection-head">Model availability</td>
+      <td>57</td>
+      <td>Sharing final model files</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>58</td>
+      <td>Sharing a ready-to-use system</td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox"></td>
+      <td><input type="text"></td>
 		</tr>
 	</table>
  
@@ -676,6 +656,5 @@ font-size: 25px;
 
 <h1> </h1>
 
-<div><button id="printPageButton" onClick="window.print()" >Print Checklist 
-		</button></div>	  
+<button id="printPageButton" onClick="window.print()" >Print Checklist </button>
 	  
