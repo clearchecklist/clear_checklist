@@ -127,7 +127,7 @@
 <h1>CLEAR Checklist v1.0</h1>
 
 <p>
-  <b>Note</b>: Hover on the question mark icon for explanation of the items.<br>
+  <b>Note</b>: Use the checklist in conjunction with the main text for clarification of all items.<br>
   Yes, details provided; No, details not provided; n/a, not applicable; Page, page number
 </p>
 
@@ -400,7 +400,7 @@
 		  of each partition, with class proportions. Describe at which level the data is split (e.g., 
 		  patient-wise, image-wise, study-wise, scanner-wise, institution-wise). Clearly state the measures 
 		  undertaken to avoid information leakage across datasets (e.g., creating the hold-out test set prior to 
-		  feature normalization, feature selection, hyperparameter optimization, and model training) [30]. Note that any 
+		  feature normalization, feature selection, hyperparameter optimization, and model training). Note that any 
 		  test data should only be used once for evaluation of the final model to prevent optimistic biases. Declare 
 		  the systematic differences among the data partitions.</span>
         </div>
@@ -564,7 +564,7 @@
       <td>
 	  <div class="tooltip">?
           <span class="tooltiptext">Provide the image types from which the radiomic features are extracted, 
-		  e.g., original or images with convolutional filters (e.g., Laplacian of Gaussian edge enhancement, wavelet decomposition) [31]. 
+		  e.g., original or images with convolutional filters (e.g., Laplacian of Gaussian edge enhancement, wavelet decomposition). 
 		  Also, give nuances about the parameters of transformed image types (e.g., 
 		  sigma values of Laplacian of Gaussian filtering). </span>
         </div>
@@ -580,8 +580,14 @@
       <td>
 	  <div class="tooltip">?
           <span class="tooltiptext">Indicate which software programs or tools are used for radiomic feature extraction. 
-		  Specify the version of the software and the exact configuration parameters (also see Item#55). Provide reference and web link to the software. Indicate if the software adheres to the benchmarks/certification of IBSI [25]. Specify the general feature types, such as deep features, hand-crafted features, engineered features, or a combination. Refer to the mathematical formulas of the hand-crafted and engineered features. Provide formulas and code if new hand-crafted features are introduced. Present the architectural details for deep feature extraction. Provide details of any feature engineering performed. Specify whether radiomic features are extracted in a two-dimensional (2D) plane, 2D tri-planar, or three-dimensional (3D) space. 
-		  If 2D features are extracted from 3D segmentation, provide reasons (e.g., large slice thickness) as to why such an approach is followed.</span>
+		  Specify the version of the software and the exact configuration parameters (also see Item#55). 
+		  Provide reference and web link to the software. Indicate if the software adheres to the benchmarks/certification of IBSI. 
+		  Specify the general feature types, such as deep features, hand-crafted features, engineered features, or a combination. 
+		  Refer to the mathematical formulas of the hand-crafted and engineered features. Provide formulas and code if new 
+		  hand-crafted features are introduced. Present the architectural details for deep feature extraction. Provide 
+		  details of any feature engineering performed. Specify whether radiomic features are extracted in a two-dimensional 
+		  (2D) plane, 2D tri-planar, or three-dimensional (3D) space. If 2D features are extracted from 3D 
+		  segmentation, provide reasons (e.g., large slice thickness) as to why such an approach is followed.</span>
         </div>
 	  Feature extraction method</td>
       <td><input type="checkbox"></td>
@@ -595,7 +601,7 @@
       <td>
 	  <div class="tooltip">?
           <span class="tooltiptext">Provide the radiomic feature classes (e.g., shape, first-order, grey-level co-occurrence matrix). Use IBSI terminology for 
-		  feature classes [25]. Specify the number of features per feature class. Mention if any feature class is excluded with reason.</span>
+		  feature classes. Specify the number of features per feature class. Mention if any feature class is excluded with reason.</span>
         </div>
 	  Feature classes</td>
       <td><input type="checkbox"></td>
@@ -654,7 +660,7 @@
           <span class="tooltiptext">Describe the method for the detection and removal of potential 
 		  confounders (e.g., differences in tumor size between cohorts, different image acquisition parameters such as slice thickness, 
 		  and differences in patient populations between primary and secondary 
-		  hospitals). This should be done both for input features and outcome variables [32, 33].</span>
+		  hospitals). This should be done both for input features and outcome variables.</span>
         </div>
 	  Handling of confounders</td>
       <td><input type="checkbox"></td>
@@ -668,7 +674,8 @@
       <td>
 	  <div class="tooltip">?
           <span class="tooltiptext">Indicate the balance status of the 
-		  classes according to the reference standard. Provide details about how class imbalance is handled. Specify the techniques (e.g., synthetic minority over-sampling, simple over-sampling through replication, under-sampling) used to achieve the class balance. 
+		  classes according to the reference standard. Provide details about how class imbalance is handled. 
+		  Specify the techniques (e.g., synthetic minority over-sampling, simple over-sampling through replication, under-sampling) used to achieve the class balance. 
 		  Clearly state these data augmentation and under-sampling strategies are applied only in the training set.</span>
         </div>
 	  Details of class imbalance</td>
@@ -686,7 +693,7 @@
 		  influence of segmentation differences. Note that an intra- and inter-rater reproducibility 
 		  analysis must be considered in manual and semi-automatic methods. Provide details about the 
 		  statistical tests used for the reliability analysis (e.g., intraclass correlation coefficient 
-		  along with types) [34]. Mention the independence of assessment. Clearly state the analysis is 
+		  along with types). Mention the independence of assessment. Clearly state the analysis is 
 		  performed using the training set.</span>
         </div>
 	  Details of segmentation reliability analysis</td>
@@ -778,9 +785,9 @@
           <span class="tooltiptext">Describe how the final model was selected. 
 		  Two broad categories for these are probabilistic (e.g., Akaike information 
 		  criterion) and resampling methods (e.g., random train-test split, cross-validation, 
-		  bootstrap validation) [12, 35]. Clearly state that only the training and validation sets are 
+		  bootstrap validation). Clearly state that only the training and validation sets are 
 		  used for model selection. State if the model complexity 
-		  is considered in selection, for instance, the “one standard error rule” [36]. Specify which 
+		  is considered in selection, for instance, the “one standard error rule”. Specify which 
 		  performance metrics were used to select the final model.</span>
         </div>
 	  Model selection strategy</td>
@@ -817,7 +824,7 @@
           <span class="tooltiptext">Specify the performance metrics to evaluate the predictive ability of the models. 
 		  Justify the selected metrics according to the characteristics of the data (e.g., class imbalance). 
 		  Beware of the potential pitfalls and follow recommendations when selecting the 
-		  appropriate performance metrics [7, 37].</span>
+		  appropriate performance metrics.</span>
         </div>
 	  Performance metrics and rationale for choosing</td>
       <td><input type="checkbox"></td>
@@ -846,7 +853,7 @@
 	  <div class="tooltip">?
           <span class="tooltiptext">Specify the statistical software and version used. 
 		  Indicate which method was used for the comparison of the model performance 
-		  such as the DeLong test [38, 39], McNemar [40], or the Bayesian approach [41]. 
+		  such as the DeLong test, McNemar, or the Bayesian approach. 
 		  Provide a statistical threshold for the comparison (e.g., p<0.05) 
 		  along with confidence intervals if applicable to the method or metric. 
 		  Also, state if multiplicity is considered when comparing multiple models. 
@@ -869,7 +876,7 @@
 		  non-radiomic approaches (e.g., clinical parameters, laboratory parameters, 
 		  traditional radiological evaluations) are performed. Non-radiomic approaches can 
 		  be combined with radiomic data as well (e.g., clinical-radiomic evaluation). 
-		  Explain how the clinical utility is assessed, such as with decision curve analysis [42].</span>
+		  Explain how the clinical utility is assessed, such as with decision curve analysis.</span>
         </div>
 	  Comparison with non-radiomic and combined methods</td>
       <td><input type="checkbox"></td>
@@ -883,7 +890,7 @@
       <td>
 	  <div class="tooltip">?
           <span class="tooltiptext">Describe the techniques used to increase the 
-		  interpretability and explainability of the models created, if applicable [43]. 
+		  interpretability and explainability of the models created, if applicable. 
 		  Figures (e.g., class activation maps, feature maps, SHapley Additive exPlanations, accumulated local effects, 
 		  partial dependence plots, etc.) related to the interpretability and 
 		  explainability of the proposed radiomic model can be provided.</span>
@@ -956,7 +963,11 @@
       <td>
 		<div class="tooltip">?
           <span class="tooltiptext">Provide the performance metrics for training, validation 
-		  (e.g., multiple splits like cross-validation, bootstrapping, etc.), and unseen test data, separately. A summary of the most important findings should be given in the text. Provide the ‘no information rate’ as well. Details can be provided in figures (e.g., ROC curve, precision-recall curve) and tables. Also, it would be a good practice to provide figures for calibration statistics to show the robustness of model performance. Present additional figures to showcase examples of true and false 
+		  (e.g., multiple splits like cross-validation, bootstrapping, etc.), and unseen test data, separately. 
+		  A summary of the most important findings should be given in the text. Provide the ‘no information rate’ as well. 
+		  Details can be provided in figures (e.g., ROC curve, precision-recall curve) and tables. Also, it would be a good 
+		  practice to provide figures for calibration statistics to show the robustness of model performance. 
+		  Present additional figures to showcase examples of true and false 
 		  predictions to help readers better understand the strengths and limitations of the proposed strategy.</span>
         </div>
 		Model performance evaluation</td>
@@ -998,7 +1009,7 @@
           <span class="tooltiptext">Provide a summary of the work and an overview of 
 		  the most important findings. No statistical information is needed. Try to position 
 		  the study into one of the following categories: proof of concept evaluation, technical 
-		  task-specific evaluation, clinical evaluation, and post-deployment evaluation [44]. 
+		  task-specific evaluation, clinical evaluation, and post-deployment evaluation. 
 		  Summarize the contribution to the literature.</span>
         </div>
 	  Overview of important findings</td>
@@ -1026,7 +1037,7 @@
       <td>51</td>
       <td>
 	  <div class="tooltip">?
-          <span class="tooltiptext">. Summarize the practical implications of the results. 
+          <span class="tooltiptext">Summarize the practical implications of the results. 
 		  Describe the key impact of the work on the field. Highlight the potential clinical value 
 		  and role of the study. Discuss any issues that may hamper the successful translation of the study 
 		  into real-world clinical practice. Also, provide future expectations and possible next steps that 
@@ -1066,7 +1077,7 @@
 		  be shared unless the segmentation is done as part of the workflow. In situations where sharing 
 		  of the entire dataset is not possible, an end-to-end analysis workflow applied to a representative sample, 
 		  or a public dataset with similar characteristics can facilitate the ability of the readers in reproducing key 
-		  components of the analysis [45]. Also, specify the reason if the data is not available.</span>
+		  components of the analysis. Also, specify the reason if the data is not available.</span>
         </div>
 		Sharing images along with segmentation data</td>
       <td><input type="checkbox"></td>
@@ -1148,7 +1159,7 @@
 		<div class="tooltip">?
           <span class="tooltiptext">An easy-to-use tool (e.g., standalone executable 
 		  applications, notebooks, websites, virtual machines, etc.) can be created and shared with 
-		  or without source code that is based on the model created [46]. The main aim is to be able 
+		  or without source code that is based on the model created. The main aim is to be able 
 		  to test or validate the model by other research groups. With this approach, users even without 
 		  experience in machine learning or coding can also test the proposed models.</span>
         </div>
