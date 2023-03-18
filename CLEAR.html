@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CheckList for EvaluAtion of Radiomics (CLEAR checklist)</title>
+  <meta charset="UTF-8">
+  <meta name="dcterms.date" content="2023-01-23">
+  
+  <style type="text/css">
+
+    /* Basic Grey */
+    .basic-grey {
+      margin-left:auto;
+      margin-right:auto;
+      max-width: 850px;
+      background: #F7F7F7;
+      padding: 15px 15px 15px 15px;
+      color: #555;
+      font-family: Arial, Helvetica, sans-serif;
+      text-shadow: 1px 1px 1px #FFF;
+      border:1px solid #E4E4E4;
+    }
+    .basic-grey table {
+      border-collapse: collapse;
+    }
+    .basic-grey td {
+      border: 0.5px solid;
+      padding: 5px;
+    }
+    .section-head {
+      font-weight: bold;
+    }
+    .subsection-head {
+      font-style: italic;
+    }
+    .basic-grey th {
+      border: 0.5px solid;
+      padding: 5px;
+      font-size: large;
+    }
+    .basic-grey div {
+      column-width: 100px;
+    }
+    .basic-grey h2 {
+      text-align: left;
+    }
+    .basic-grey h4 {
+      font-weight: normal;
+    }
+    .basic-grey button {
+        background: #E27575;
+        border: none;
+        padding: 5px 25px 5px 25px;
+        color: #FFF;
+        box-shadow: 1px 1px 5px #B6B6B6;
+        border-radius: 3px;
+        text-shadow: 1px 1px 1px #9E3F3F;
+        cursor: pointer;
+    }
+    .basic-grey button:hover {
+        background: #CF7A7A
+    }
+    input[type=text] {
+      width: 30px;
+    }
+
+    .tooltip {
+      position: relative;
+      margin-right: 10px;
+      display: inline;
+      background: #999;
+      border: none;
+      padding: 2px 3px 2px 7px;
+      color: #EEE;
+      box-shadow: 1px 1px 5px #B6B6B6;
+      border-radius: 3px;
+      text-shadow: none;
+      cursor: pointer;
+    }
+
+    .tooltip:hover {
+      background: #666;
+    }
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 400px;
+      background-color: black;
+      color: #fff;
+      text-shadow: none;
+      text-align: left;
+      font-size: small;
+      border-radius: 6px;
+      padding: 10px 15px;      
+      /* Position the tooltip */
+      position: absolute;
+      z-index: 1;
+      top: -5px;
+      left: 105%;
+    }
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
+    
+    @media print {
+      #printPageButton {
+        display: none;
+      }
+      .basic-grey {
+        background: #FFF;
+        border: 0px;
+        font-size: small;
+      }
+      .tooltip {
+        display: none;
+      }
+	  #versionlinkbutton {
+        display: none;
+      }
+    }
+	
+	td input[type="checkbox"] {
+		float: left;
+		margin: 0 auto;
+		width: 100%;
+	}
+  </style>
+
+</head>
+
+<body class="basic-grey">
+
+<button id="printPageButton" onClick="window.print()" >Print Checklist</button>
+<h1>CLEAR Checklist v1.0</h1>
+
+    <button id="versionlinkbutton" onclick="window.location.href='https://clearchecklist.github.io/clear_checklist/CLEAR-S.html';">
+      Click here for short version (CLEAR-S Checklist)
+    </button>
+
+<p>
+  <b>Note</b>: Use the checklist in conjunction with the main text for clarification of all items.<br>
+  Yes, details provided; No, details not provided; n/a, not applicable; Page, page number
+</p>
+
+<table>
+
+  <thead>
+    <tr>
+      <th>Section</th>
+      <th>No.</th>
+      <th>Item</th>
+		<th width = "30px">Yes</th>
+		<th width = "30px">No</th>
+		<th width = "30px">n/a</th>
+      <th>Page</th>
+    </tr>
+  </thead>
+
+  <tbody>
+	  <tr>
+      <td colspan="7" class="section-head">Title</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>1</td>
+      <td>
+        <div class="tooltip">?
+          <span class="tooltiptext">Indicate the use of radiomics in the title. 
+		  The following details can also be considered to be specified in the title: radiomic technique 
+		  (e.g., hand-crafted, engineered, deep, delta, etc.), modality (e.g., computed tomography [CT], 
+		  magnetic resonance imaging [MRI], ultrasound), important aspects of the scans (e.g., unenhanced, 
+		  dynamic), use of machine learning (e.g., machine learning-based), external validation, and 
+		  multi-centre design.</span>
+        </div>
+        Relevant title, specifying the radiomic methodology
+      </td>
+		
+      <td><input type="checkbox" class="exclusive" data-linked="group1" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group1" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group1" ></td> 
+      <td><input type="text"></td>
+    </tr>
+	  <tr>
+      <td colspan="7" class="section-head">Abstract</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>2</td>
+      <td>
+		<div class="tooltip">?
+          <span class="tooltiptext">Provide a structured summary of the purpose, methods, results, 
+		  and conclusions, presenting only the most important aspects directly related to the purpose of the study. 
+		  The abstract should be understandable on its own, without reading the main text. Considering the submission 
+		  guidelines of the journals, it is recommended to specify the following items: the baseline characteristics 
+		  (e.g., number of patients, scans, images, classes), data source (e.g., public, institutional), study nature 
+		  (e.g., prospective, retrospective), segmentation technique (e.g., automated, semi-automated, or manual), 
+		  feature extraction technique (e.g., hand-crafted, engineered, deep), dimensionality reduction techniques 
+		  (e.g., feature selection, reproducibility analysis, multi-collinearity), modelling details (e.g., algorithms/models), 
+		  validation technique (e.g., cross-validation), unseen testing (internal hold-out, external testing), model performance metrics 
+		  (e.g., area under the curve) with uncertainty measures (e.g., confidence intervals), number of the final set of features, 
+		  traditional statistical methods with p-values, and open science status (e.g., public availability of data, code, and/or model).</span>
+        </div>
+		Structured summary with relevant information</td>
+			<fieldset1>	
+      <td><input type="checkbox" class="exclusive" data-linked="group2" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group2" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group2" ></td>  
+		</fieldset1>
+      <td><input type="text"></td>
+	  
+    </tr>
+    <tr>
+      <td colspan="7" class="section-head">Keywords</td>
+    </tr>
+	  <tr>
+      <td>&nbsp;</td>
+      <td>3</td>
+      <td>
+		<div class="tooltip">?
+          <span class="tooltiptext">List the primary keywords that indicate 
+		  (e.g., radiomics, texture analysis) and characterize a radiomic study 
+		  (e.g., machine learning, deep learning, computed tomography, magnetic resonance imaging, 
+		  reproducibility), unless the journal requires exclusive use of certain terms (e.g., 
+		  MeSH terms, which do not yet include radiomics-specific terms).</span>
+        </div>
+		Relevant keywords for radiomics</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group3" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group3" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group3" ></td> 
+      <td><input type="text"></td>
+    </tr>
+	  <tr>
+      <td colspan="7" class="section-head">Introduction</td>
+    </tr>
+	  <tr>
+      <td>&nbsp;</td>
+      <td>4</td>
+      <td>
+		<div class="tooltip">?
+          <span class="tooltiptext">Define the scientific or clinical problem with 
+		  a summary of the related literature and knowledge gaps, including a short review 
+		  of the current state of knowledge. Describe why the scientific question is technically 
+		  or clinically important. </span>
+        </div>
+		Scientific or clinical background</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group4" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group4" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group4" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>5</td>
+      <td>
+		<div class="tooltip">?
+          <span class="tooltiptext">Describe why a radiomic approach is considered. 
+		  Performance and problematic aspects of currently used methods need to be described. 
+		  Mention what the radiomics approach would offer to solve these problems. Clearly state 
+		  how radiomics could affect clinical practice considering the study question.</span>
+        </div>
+		Rationale for using a radiomic approach</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group5" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group5" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group5" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>6</td>
+      <td>
+		<div class="tooltip">?
+          <span class="tooltiptext">Describe the purpose of the study 
+		  while focusing on the scientific problem. Mention the expected 
+		  contributions to the current literature. </span>
+        </div>
+		Study objective(s)</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group6" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group6" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group6" ></td> 
+      <td><input type="text"></td>
+    </tr>
+	  <tr>
+      <td colspan="7" class="section-head">Method</td>
+    </tr>
+	  <tr>
+      <td class="subsection-head">Study Design</td>
+      <td>7</td>
+      <td>
+		<div class="tooltip">?
+          <span class="tooltiptext">Indicate that the CLEAR checklist was used for 
+		  reporting and submit the checklist as supplemental data. Do the same with other checklists 
+		  or guidelines if used in addition to the CLEAR checklist.</span>
+        </div>
+		Adherence to guidelines or checklists (e.g., CLEAR checklist)</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group7" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group7" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group7" ></td> 
+      <td><input type="text"></td>
+    </tr>
+	  <tr>
+      <td>&nbsp;</td>
+      <td>8</td>
+      <td>
+		<div class="tooltip">?
+          <span class="tooltiptext">Describe the ethical questions to 
+		  ensure that the study was conducted appropriately. Give information about 
+		  ethical approval, informed consent, and data protection (e.g., de-identification) 
+		  if the data is from private sources.</span>
+        </div>
+		Ethical details (e.g., approval, consent, data protection)</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group8" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group8" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group8" ></td> 
+      <td><input type="text"></td>
+    </tr>
+	  <tr>
+      <td>&nbsp;</td>
+      <td>9</td>
+      <td>
+		<div class="tooltip">?
+          <span class="tooltiptext">Describe how the sample size or power 
+		  was determined before or after the study (
+		  e.g., sample size/power calculation, based on availability). </span>
+        </div>
+	  Sample size calculation</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group9" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group9" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group9" ></td> 
+      <td><input type="text"></td>
+    </tr>
+	  <tr>
+      <td>&nbsp;</td>
+      <td>10</td>
+      <td>
+		<div class="tooltip">?
+          <span class="tooltiptext">Indicate whether the study is prospective 
+		  or retrospective and case/control or cohort, etc. In case of prospective studies, 
+		  provide registration details if available.</span>
+        </div>
+		Study nature (e.g., retrospective, prospective)</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group10" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group10" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group10" ></td> 
+      <td><input type="text"></td>
+    </tr>
+	  <tr>
+      <td>&nbsp;</td>
+      <td>11</td>
+      <td>
+		<div class="tooltip">?
+          <span class="tooltiptext">Define the inclusion criteria first. 
+		  Then, specify the exclusion criteria. Avoid redundancies by using the 
+		  opposite of the inclusion criteria as exclusion criteria. 
+		  Specify the selection process (e.g., random, consecutive). Keep the 
+		  numeric details of eligibility for the results.</span>
+        </div>
+		Eligibility criteria</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group11" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group11" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group11" ></td> 
+      <td><input type="text"></td>
+    </tr>
+	  <tr>
+      <td>&nbsp;</td>
+      <td>12</td>
+      <td>
+		<div class="tooltip">?
+          <span class="tooltiptext">Provide a flowchart for summarizing 
+		  the key methodological steps in the study. Due to the complex nature of 
+		  the radiomic approaches, such flowcharts help readers better understand 
+		  the methodology.</span>
+        </div>
+	  Flowchart for technical pipeline</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group12" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group12" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group12" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td class="subsection-head">Data</i></td>
+      <td>13</td>
+      <td>
+		<div class="tooltip">?
+          <span class="tooltiptext">State the data source (e.g., private, public, mixed 
+		  [both private and public]). State clearly which data source is used in different 
+		  data partitions. Provide web links and references if the source is public. Give 
+		  the image or patient identifiers as a supplement if public data is used.</span>
+        </div>
+	  Data source (e.g., private, public)</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group13" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group13" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group13" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    
+    <tr>
+      <td>&nbsp;</td>
+      <td>14</td>
+      <td>
+		<div class="tooltip">?
+          <span class="tooltiptext">State if any part of the dataset was used 
+		  in a previous publication. Describe the differences between the 
+		  current study and previous studies in terms of study purpose and methodology.</span>
+        </div>
+	  Data overlap</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group14" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group14" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group14" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>15</td>
+      <td>
+		<div class="tooltip">?
+          <span class="tooltiptext">Describe the data split into training, validation, 
+		  and test sets. Mention that multiple splits are created (e.g., k-fold cross-validation 
+		  or bootstrapping). Specify how the assignment was done (e.g., random, semi-random, manual, 
+		  centre-wise, chronological order). Indicate the ratio of each partition, with class proportions. 
+		  Describe at which level the data is split (e.g., patient-wise, image-wise, study-wise, scanner-wise, 
+		  institution-wise). Clearly state the measures undertaken to avoid information leakage across datasets (
+		  e.g., creating the hold-out test set before feature normalization, feature selection, hyperparameter 
+		  optimization, and model training) [23]. Note that any test data should only be used once for evaluation 
+		  of the final model to prevent optimistic biases. Declare the systematic differences among the data partitions.</span>
+        </div>
+	  Data split methodology</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group15" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group15" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group15" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>16</td>
+      <td>
+		<div class="tooltip">?
+          <span class="tooltiptext">Provide the imaging protocol and acquisition parameters with 
+		  post-processing details. Define physical pixel and voxel dimensions. Clearly state whether single or 
+		  multiple or various scanners are used, with the number of instances for each protocol. Define the timing of the phase if a contrast medium was used. 
+		  State the patient preparation (drug administration, blood sugar control before the scans, etc.) if performed.</span>
+        </div>
+	  Imaging protocol (i.e., image acquisition and processing)</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group16" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group16" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group16" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>17</td>
+      <td>
+		<div class="tooltip">?
+          <span class="tooltiptext">Describe the data elements appearing as non-radiomic predictors. 
+		  Non-radiomic variables might be demographic characteristics (e.g., age, gender, ethnicity), 
+		  widely used traditional laboratory biomarkers (e.g., carcinoembryonic antigen), or traditional 
+		  approaches used in daily clinical practice (e.g., radiologist’s qualitative reading, Hounsfield Unit 
+		  evaluation, Response Evaluation Criteria in Solid Tumours (RECIST), Response Assessment in Neuro-Oncology 
+		  (RANO) criteria). It would be helpful to know how these predictors were identified (e.g., based on a literature review). 
+		  If applicable, 
+		  describe any transformation of predictors (e.g., binarization of continuous predictors, the grouping of levels of categorical variables).</span>
+        </div>
+	  Definition of non-radiomic predictor variables</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group17" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group17" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group17" ></td> 
+      <td><input type="text"></td>
+    </tr>
+	  <tr>
+      <td>&nbsp;</td>
+      <td>18</td>
+      <td>
+		<div class="tooltip">?
+          <span class="tooltiptext">Describe the reference standard or outcome 
+		  measure that the radiomic approach will predict (e.g., pathological grade, 
+		  histopathological subtypes, genomic markers, local-regional control, survival, etc.). 
+		  Provide the rationale for the choice of the reference standard 
+		  (e.g., higher reproducibility rates). Clearly state the reproducibility concerns, potential 
+		  biases, and limitations of the reference standard.</span>
+        </div>
+	  Definition of the reference standard (i.e., outcome variable)</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group18" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group18" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group18" ></td> 
+      <td><input type="text"></td>
+    </tr>
+	  <tr>
+      <td class="subsection-head">Segmentation</i></td>
+      <td>19</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">Indicate which software programs or tools are used 
+		  for segmentation or annotation. Specify the version of the software and the exact 
+		  configuration parameters. Provide reference and web link to the software. Describe the 
+		  segmentation method (e.g., automatic, semi-automatic, manual). Provide the rules of the 
+		  segmentation (e.g., margin shrinkage or expansion from the visible contour, included/excluded regions). 
+		  Provide figures to show the segmentation style. Provide image registration details (e.g., software, version, 
+		  link, parameters) if segmentation is propagated for multi-modal (e.g., CT and MR), multi-phase (e.g., unenhanced, 
+		  arterial, venous phase CT), or multi-sequence (e.g., T2-weighted, post-contrast T1-weighted, diffusion-weighted 
+		  imaging) analyses. If radiomic features are extracted from 2D images on a single slice, please explain with which 
+		  criteria the slice is chosen. In the case of several lesions, explain if all the lesions are segmented and describe 
+		  how the feature values are aggregated. If only one lesion is chosen, describe the criteria (e.g., the primitive 
+		  or the most voluminous).</span>
+        </div>
+	  Segmentation strategy</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group19" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group19" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group19" ></td> 
+      <td><input type="text"></td>
+    </tr>	  
+	  <tr>
+      <td>&nbsp;</td>
+      <td>20</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">State how many readers performed the segmentation, 
+		  as well as their experience. In the case of multiple readers, describe how the 
+		  final form of segmentation is achieved (e.g., the consensus of readers, intersection 
+		  of segmentations, independent segmentation for further reproducibility analysis, sequential 
+		  refinements from numerous expert raters until convergence), which is particularly important for 
+		  the training data because the 
+		  segmentation process on the test data should be as close to the clinical practice as possible, that is, the segmentation of a single reader. </span>
+        </div>
+	  Details of operators performing segmentation</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group20" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group20" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group20" ></td> 
+      <td><input type="text"></td>
+    </tr>
+	  <tr>
+      <td class="subsection-head">Pre-processing</i></td>
+      <td>21</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">Indicate which software programs or tools are used for 
+		  pre-processing. Specify the version of the software and the exact configuration parameters. 
+		  Provide reference and web link to the software, if available. Describe all pre-processing techniques 
+		  and associated parameters applied to the image including the normalization (e.g., minimum-maximum normalization, 
+		  standardization, logarithmic transformation, bias field correction), de-noising, skull stripping (also known as 
+		  brain extraction), interpolation to create uniform images (e.g., in terms of slice thickness), 
+		  standardized uptake value conversion, and registration. Also, state if an image or feature-based harmonization technique was used.</span>
+        </div>
+	  Image pre-processing details</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group21" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group21" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group21" ></td> 
+      <td><input type="text"></td>
+    </tr>
+	  <tr>
+      <td>&nbsp;</td>
+      <td>22</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">Specify the resampling technique 
+		  (e.g., linear, cubic b-spline) applied to the pixels or voxels. 
+		  Provide the physical pixel and voxel dimensions after resampling.</span>
+        </div>
+	  Resampling method and its parameters</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group22" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group22" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group22" ></td> 
+      <td><input type="text"></td>
+    </tr>
+	  <tr>
+      <td>&nbsp;</td>
+      <td>23</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">Specify the discretization method (e.g., fixed bin width, 
+		  fixed bin count method, or histogram equalization) used for hand-crafted radiomic feature extraction. 
+		  Report the rationale for using a particular discretization technique. Indicate the number of grey levels 
+		  for the fixed bin count method or the bin width as well as the value of the first level (or minimum and maximum bounds) 
+		  for the fixed bin width method. Any experimental detail with different discretization methods and values is important to declare.</span>
+        </div>
+	  Discretization method and its parameters</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group23" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group23" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group23" ></td> 
+      <td><input type="text"></td>
+    </tr>
+      <tr>
+      <td>&nbsp;</td>
+      <td>24</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">Provide the image types from which the radiomic features 
+		  are extracted, e.g., original or images with convolutional filters (e.g., Laplacian 
+		  of Gaussian edge enhancement, wavelet decomposition) 
+		  [24]. Also, give nuances about the parameters of transformed image types (e.g., sigma 
+		  values of Laplacian of Gaussian filtering).</span>
+        </div>
+	  Image types (e.g., original, filtered, transformed)</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group24" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group24" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group24" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td class="subsection-head">Feature extraction</i></td>
+      <td>25</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">Indicate which software programs or tools are 
+		  used for radiomic feature extraction. Specify the version of the software 
+		  and the exact configuration parameters (also see Item#55). Provide reference 
+		  and web link to the software. Indicate if the software adheres to the benchmarks/certification 
+		  of IBSI [25]. Specify the general feature types, such as deep features, hand-crafted features, 
+		  engineered features, or a combination. Refer to the mathematical formulas of the hand-crafted and 
+		  engineered features. Provide formulas and code if new hand-crafted features are introduced. Present 
+		  the architectural details for deep feature extraction. Provide details of any feature engineering performed. 
+		  Specify whether radiomic features are extracted in a two-dimensional (2D) plane, 2D tri-planar, or three-dimensional (3D) space. If 2D 
+		  features are extracted from 3D segmentation, provide reasons (e.g., large slice thickness) as to why such an approach is followed.</span>
+        </div>
+	  Feature extraction method</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group25" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group25" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group25" ></td> 
+      <td><input type="text"></td>
+    </tr> 
+    <tr>
+      <td>&nbsp;</td>
+      <td>26</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">Provide the radiomic feature classes (e.g., shape, first-order, grey-level co-occurrence matrix). 
+		  Use IBSI terminology for feature classes [25]. Specify the number of features per feature class. Mention if any feature class is excluded with reason.</span>
+        </div>
+	  Feature classes</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group26" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group26" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group26" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>27</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">Indicate the total number of features per instance. 
+		  If applicable, provide the number of features per imaging modality and its components (e.g., phase for CT, sequence for MRI, etc.).</span>
+        </div>
+	  Number of features</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group27" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group27" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group27" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>28</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">After providing all modified parameters of 
+		  pre-processing and radiomic feature extraction, state clearly that all 
+		  other parameters remained as a default configuration.</span>
+        </div>
+	  Default configuration statement for remaining parameters</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group28" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group28" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group28" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td class="subsection-head">Data preparation</td>
+      <td>29</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">State if, and how much, 
+		  missing data are present in the study. If so, provide details as to 
+		  how it was addressed (e.g., deletion, substitution, or imputation).</span>
+        </div>
+	  Handling of missing data</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group29" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group29" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group29" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>30</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">Indicate the balance status of the classes according to the reference 
+		  standard. Provide details about how class imbalance is handled. Specify the techniques (e.g., 
+		  synthetic minority over-sampling, simple over-sampling through replication, under-sampling) 
+		  used to achieve the class balance. Clearly state these data augmentation 
+		  and under-sampling strategies are applied only in the training set.</span>
+        </div>
+	  Details of class imbalance</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group30" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group30" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group30" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>31</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">Describe the reliability analysis done to 
+		  assess the influence of segmentation differences. An intra- and inter-rater 
+		  reproducibility analysis must be considered in manual and semi-automatic methods. 
+		  Provide details about the statistical tests used for the reliability analysis (e.g., 
+		  intraclass 
+		  correlation coefficient along with types) [26]. Mention the independence of assessment. 
+		  Clearly state the analysis is performed using the training set.</span>
+        </div>
+	  Details of segmentation reliability analysis</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group31" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group31" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group31" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>32</td>
+      <td>
+		<div class="tooltip">?
+          <span class="tooltiptext">If applicable, describe the normalization 
+		  technique applied to the radiomic feature data (e.g., minimum-maximum normalization, 
+		  standardization, logarithmic transformation, ComBat normalization [choice of the batch, 
+		  parametric or not, with or without empirical Bayes]). Specify the normalization scale. 
+		  It is important to emphasize that 
+		  this procedure is applied to the numeric radiomic feature data, not the images, in the 
+		  training set and independently applied to the validation and test sets.</span>
+        </div>
+		Feature scaling details (e.g., normalization, standardization)</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group32" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group32" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group32" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>33</td>
+      <td>
+		<div class="tooltip">?
+          <span class="tooltiptext">Specify the dimension reduction methods used, 
+		  if applicable (e.g., collinearity analysis, reproducibility analysis, 
+		  algorithm-based feature selection). Provide details about the statistical 
+		  methods used. For example, provide the relevant statistical cut-off values for 
+		  each step (e.g., features with intraclass correlation coefficient ≤0.9 are excluded). 
+		  Clearly state the dimension reduction that is 
+		  performed using the training set. Specify how the final number of features is achieved, 
+		  for instance, the “rule of thumb” of ten features maximum for each instance.</span>
+        </div>
+		Dimension reduction details</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group33" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group33" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group33" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td class="subsection-head">Modelling</td>
+      <td>34</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">Provide the name and version of software programs 
+		  or packages used for modelling. Refer to the related publication of the software if 
+		  available. Specify the algorithms used to create models with architectural details including 
+		  inputs, outputs, and all intermediate components. The description of the architecture should be complete 
+		  to allow for exact replication by other investigators (also see Item#55 and Item#56). When a previously 
+		  described architecture is used, refer to the previous work 
+		  and specify any modification. If the final model involved an ensemble of algorithms, specify the type of 
+		  ensemble (e.g., stacking, majority voting, averaging, etc.).</span>
+        </div>
+	  Algorithm details</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group34" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group34" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group34" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>35</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">Describe the training process with adequate 
+		  detail. Specify the augmentation technique, stopping criteria for training, 
+		  hyperparameter tuning strategy (e.g., random, grid-search, Bayesian), range of hyperparameter 
+		  values used in tuning, optimization techniques, regularization parameters, and initialization 
+		  of model parameters (e.g., random, transfer learning). If transfer learning is applied, clearly state 
+		  which layers or parameters are frozen or affected.</span>
+        </div>
+	  Training and tuning details</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group35" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group35" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group35" ></td> 
+      <td><input type="text"></td>
+    </tr>
+	<td>&nbsp;</td>
+      <td>36</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">Describe the method (e.g., directed acyclic graphs) 
+		  for the detection and removal of potential confounders (e.g., differences in tumour 
+		  size between cohorts, different image acquisition parameters such as slice thickness, 
+		  and differences in patient populations between primary and secondary hospitals). This should 
+		  be done both for input features and outcome variables [27, 28].</span>
+        </div>
+	  Handling of confounders</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group36" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group36" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group36" ></td> 
+      <td><input type="text"></td>
+    <tr>
+      <td>&nbsp;</td>
+      <td>37</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">Describe how the final model was selected. 
+		  Two broad categories for these are probabilistic (e.g., Akaike information 
+		  criterion, Bayesian information criterion) and resampling methods (e.g., random 
+		  train-test split, cross-validation, bootstrap validation) [12, 29]. Clearly state that 
+		  only the training and validation sets are used for model selection. State if the model 
+		  complexity 
+		  is considered in selection, for instance, the “one standard error rule” [30]. Specify 
+		  which performance metrics were used to select the final model.</span>
+        </div>
+	  Model selection strategy</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group37" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group37" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group37" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td class="subsection-head">Evaluation</td>
+      <td>38</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">Clearly state whether 
+		  the model was internally or externally tested. The term 
+		  “external testing” should only be used for the process that 
+		  involves data usage from different institutions. In the case 
+		  of external testing, specify the number of sites providing 
+		  data and further details about whether they are used for multiple 
+		  testing or in a single test. Describe the data characteristics and 
+		  state if there are any differences among training, validation, internal 
+		  testing, and external testing datasets (e.g., different scanners, different 
+		  readers for segmentation, different ethnicity). Again, note that any test data 
+		  should only be used once for evaluation to prevent optimistic biases.</span>
+        </div>
+	  Testing technique (e.g., internal, external)</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group38" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group38" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group38" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>39</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">Specify the performance metrics to 
+		  evaluate the predictive ability of the models. Justify the selected 
+		  metrics according to the 
+		  characteristics of the data (e.g., class imbalance). 
+		  Beware of the potential pitfalls and follow recommendations when selecting 
+		  the appropriate performance metrics </span>
+        </div>
+	  Performance metrics and rationale for choosing</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group39" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group39" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group39" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>40</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">Describe the uncertainty evaluation (e.g., robustness, 
+		  sensitivity analysis, calibration analysis if applicable) and measures of uncertainty 
+		  quantification (e.g., confidence intervals, standard deviation).</span>
+        </div>
+	  Uncertainty evaluation and measures (e.g., confidence intervals)</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group40" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group40" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group40" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>41</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">Specify the statistical software and version used. 
+		  Indicate which method was used for the comparison of the model performance such as the DeLong test 
+		  [32, 33], McNemar [34], or the Bayesian approach [35]. Provide a statistical threshold for the comparison 
+		  (e.g., p<0.05) along with confidence intervals if applicable to the method or metric. 
+		  Also, state if multiplicity is considered and corrected when comparing multiple models 
+		  (e.g., p-value adjustment, Bonferroni correction, false-discovery rate). Report
+		  threshold values to stratify data into groups for statistical testing (e.g., 
+		  the operating point on the receiver operating characteristic [ROC] curve to 
+		  define the confusion matrix, cut-off values for defining strata in survival analysis).</span>
+        </div>
+	  Statistical performance comparison (e.g., DeLong test)</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group41" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group41" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group41" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>42</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">Indicate whether comparisons with non-radiomic 
+		  approaches (e.g., clinical parameters, laboratory parameters, traditional radiological evaluations) 
+		  are performed. Non-radiomic approaches can be combined with radiomic data as well (e.g., clinical-radiomic evaluation). 
+		  Explain how the clinical utility is assessed, such as with decision curve analysis [36].</span>
+        </div>
+	  Comparison with non-radiomic and combined methods</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group42" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group42" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group42" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>43</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">Describe the techniques used to increase the interpretability 
+		  and explainability of the models created, if applicable [37]. Figures (e.g., class activation 
+		  maps, feature maps, SHapley Additive exPlanations, 
+		  accumulated local effects, partial dependence plots, etc.) related to the interpretability and 
+		  explainability of the proposed radiomic model can be provided.</span>
+        </div>
+	  Interpretability and explainability methods</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group43" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group43" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group43" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td colspan="7" class="section-head">Results</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>44</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">Provide the baseline demographic, 
+		  clinical, and imaging characteristics in text and/or tables. Report 
+		  the information separately for training, validation (i.e., cross-validation), 
+		  and test datasets, along with grouping based on the reference standard or non-radiomic variables. 
+		  Associated statistical tests should also be provided to identify if the sets are identical 
+		  or not. Provide whether any confounder is detected and handled appropriately. </span>
+        </div>
+	  Baseline demographic and clinical characteristics</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group44" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group44" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group44" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>45</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">Provide a flowchart for summarizing eligibility 
+		  criteria with the number of included and excluded instances. 
+		  If more than one data source is involved, please give details for each source separately.</span>
+        </div>
+	  Flowchart for eligibility criteria</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group45" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group45" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group45" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>46</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">Give statistical information (e.g., 
+		  distribution of features based on outcome variables) of the selected 
+		  features for inclusion into the model. Provide the name and number of reproducible 
+		  features (e.g., for segmentation reproducibility, for reproducibility against image perturbations). 
+		  Create a table for the selected features with details of feature name, class, and image type. Also, 
+		  provide results of reproducibility statistics. Reproducibility metrics of selected features can be 
+		  presented in 
+		  tables or supplementary files. Figures (e.g., boxplots, correlation matrix, feature importance plots) 
+		  and tables of descriptive summaries of features can be provided.</span>
+        </div>
+	  Feature statistics (e.g., reproducibility, feature selection)</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group46" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group46" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group46" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>47</td>
+      <td>
+		<div class="tooltip">?
+          <span class="tooltiptext">Provide the performance metrics for training, validation 
+		  (e.g., multiple splits like cross-validation, bootstrapping, etc.), and unseen test data, 
+		  separately. A summary of the most important findings should be given in the text. Provide 
+		  the ‘no information rate’ as well. Details can be provided in figures (e.g., ROC curves, precision-recall curves) 
+		  and tables. It is a good practice to provide figures for calibration statistics to show the robustness of model 
+		  performance. Present 
+		  additional figures to showcase examples of true and false predictions to help readers better 
+		  understand the strengths and limitations of the proposed strategy.</span>
+        </div>
+		Model performance evaluation</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group47" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group47" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group47" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr> 
+      <td>&nbsp;</td>
+      <td>48</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">Give the results about the comparison of radiomic approaches with 
+		  non-radiomic (e.g., visual analysis, clinical only parameters) or combined approaches in the text and 
+		  preferably on a table. Present the results for training, validation, and test data, separately. Provide 
+		  uncertainty measures (e.g., confidence intervals, standard deviation, etc.) and statistical comparison 
+		  results with p-values for each. Confusion matrices must also be provided. Aside from the predictive performance, 
+		  specify which model is superior to others in terms of clinical utility. The clinical utility can be presented with 
+		  a decision curve analysis. For the decision curve analysis, quantify the net benefit according to optimal probability 
+		  thresholds, with multiple cut-points associated with different clinical views. 
+		  Also, provide the rationale for why a specific threshold could be appropriate and clearly 
+		  state what is meant by all and none strategies.</span>
+        </div>
+	  Comparison with non-radiomic and combined approaches</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group48" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group48" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group48" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td colspan="7" class="section-head">Discussion</td>   
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>49</td>
+      <td>
+		<div class="tooltip">?
+          <span class="tooltiptext">Provide a summary of the work and an overview of 
+		  the most important findings. No statistical information is needed. Try to 
+		  position the study into one of the following categories: proof of 
+		  concept evaluation, technical task-specific evaluation, clinical evaluation, 
+		  and post-deployment evaluation [38]. Summarize the contribution to the literature.</span>
+        </div>
+	  Overview of important findings</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group49" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group49" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group49" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>50</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">Provide the most important and relevant previous works. 
+		  Mention the most prominent differences between the current study and the previous works. </span>
+        </div>
+	  Previous works with differences from the current study</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group50" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group50" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group50" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>51</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">Summarize the practical implications of the results. 
+		  Describe the key impact of the work on the field. Highlight the potential clinical 
+		  value and role of the study. Discuss any issues that may hamper the successful translation 
+		  of the study into real-world clinical practice. Also, provide future expectations and possible 
+		  next steps that others might build upon the current work.</span>
+        </div>
+	  Practical implications</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group51" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group51" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group51" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>52</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">Clearly state the strengths and the limitations of the current work. 
+		  Any issue that may lead to potential bias, uncertainty, reproducibility, 
+		  robustness, and generalizability problems should be declared.</span>
+        </div>
+	  Strengths and limitations (e.g., bias and generalizability issues)</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group52" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group52" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group52" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td colspan="7" class="section-head">Open Science</td>
+    </tr>
+    <tr>
+      <td class="subsection-head">Data availability</td>
+      <td>53</td>
+      <td>
+		<div class="tooltip">?
+          <span class="tooltiptext">[Please note this item is “not essential” but “recommended”] Provide relevant raw or processed image data 
+		  considering the regulatory constraints of the institutions involved. Segmentation 
+		  data can also be shared unless the segmentation is done as part of the workflow. In 
+		  situations where sharing of the entire dataset is not possible, an end-to-end analysis workflow 
+		  applied to a representative sample, or a public dataset with similar characteristics can facilitate 
+		  the ability of the readers in reproducing key components of the analysis [39]. Also, specify the reason if 
+		  the data is not available.</span>
+        </div>
+		Sharing images along with segmentation data</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group53" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group53" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group53" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>54</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">Share selected radiomic feature 
+		  data along with clinical variables or labels with the public, if possible (i.e., 
+		  in accordance with the regulatory constraints of the institute). Specify the reason 
+		  if the radiomic feature data is not available.</span>
+        </div>
+		Sharing radiomic feature data</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group54" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group54" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group54" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td class="subsection-head">Code availability</td>
+      <td>55</td>
+      <td>
+	  <div class="tooltip">?
+          <span class="tooltiptext">Share the pre-processing and feature 
+		  extraction parameter scripts or settings (e.g., YAML file in PyRadiomics or complete 
+		  textual description). If it is not available in a script format, then the 
+		  parameter configuration as appeared in the software program can be shared as a screenshot.</span>
+        </div>
+		Sharing pre-processing scripts or settings</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group55" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group55" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group55" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>56</td>
+      <td>
+		<div class="tooltip">?
+          <span class="tooltiptext">Share the modelling scripts [40]. Code scripts should include 
+		  sufficient information to replicate the presented analysis (e.g., to train and test pipeline), 
+		  with all dependencies and relevant comments to easily understand and build upon the method. Even 
+		  if the actual input dataset used cannot be shared, in situations where a similar dataset is available publicly, 
+		  it should be used to share an example workflow with all pre- and post-processing steps included. 
+		  Specify the reason in case the source code is not available.</span>
+        </div>
+		Sharing source code for modelling</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group56" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group56" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group56" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td class="subsection-head">Model availability</td>
+      <td>57</td>
+      <td>
+		<div class="tooltip">?
+          <span class="tooltiptext">Share the final model files for internal or external 
+		  testing [40]. Describe how inputs should be prepared to use the model. 
+		  Also, include the source code that was used for pre-processing the input data. 
+		  Specify the reason in case the final model data is not available.</span>
+        </div>
+		Sharing final model files</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group57" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group57" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group57" ></td> 
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>58</td>
+      <td>
+		<div class="tooltip">?
+          <span class="tooltiptext">[Please note this item is “not essential” but “recommended”] An easy-to-use tool (e.g., standalone executable applications, 
+		  notebooks, websites, virtual machines, etc.) can be created and shared with or without source 
+		  code that is based on the model created [40]. The main aim is to be able to test or validate the 
+		  model by other research groups. With this approach, users even without experience in machine learning 
+		  or coding can also test the proposed models.</span>
+        </div>
+		Sharing a ready-to-use system</td>
+      <td><input type="checkbox" class="exclusive" data-linked="group58" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group58" ></td>
+      <td><input type="checkbox" class="exclusive" data-linked="group58" ></td> 
+      <td><input type="text"></td>
+		</tr>
+	</table>
+ 
+		
+
+
+<h1> </h1>
+
+<button id="printPageButton" onClick="window.print()" >Print Checklist </button>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+ 
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script>
+$(function() {
+  $('.exclusive').mousedown(function() {
+    var linked = $(this).data('linked');
+    $(':checkbox[data-linked="' + linked + '"]').prop('checked', false);
+  });
+});
+</script>
+
+</body>
+</html>
