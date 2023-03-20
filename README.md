@@ -17,6 +17,6 @@ We aimed to develop a single documentation standard for radiomics research that 
 We hope that this checklist will stimulate a discussion of the proposed items. We encourage the community to provide us with their views about how this checklist can be improved in the future. 
 
 ## How to Use This Repository? ##
-Markup : -Under the "Discussions", create a new discussion.
-Markup : -Then, select category "General"
-Markup : -Then, enter title for the number of item (e.g., item#1 or item#41 as appear in the publication) that you want to discuss.
+- Under the "Discussions", create a new discussion.
+- Then, select category "General"
+- Then, enter title for the number of item (e.g., item#1 or item#41 as appear in the publication) that you want to discuss.
