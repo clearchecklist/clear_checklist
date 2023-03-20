@@ -1,11 +1,11 @@
 # CLEAR Checklist Repository
 A repository to allow the radiomics community to comment on the CLEAR checklist items.
 
-# Online CLEAR Checklist
+## Online CLEAR Checklist ##
 https://clearchecklist.github.io/clear_checklist/CLEAR.html
 
 
-# About Checklist
+## About Checklist ##
 -Authors =  
 -Publication =  
 
