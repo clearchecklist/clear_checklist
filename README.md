@@ -6,8 +6,8 @@ https://clearchecklist.github.io/clear_checklist/CLEAR.html
 
 
 ## About Checklist ##
--Authors =  
--Publication =  
+- Authors =  
+- Publication =  
 
 ## Purpose of Checklist ##
 We aimed to develop a single documentation standard for radiomics research that can guide authors and reviewers. 
