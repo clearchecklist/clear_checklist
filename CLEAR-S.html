@@ -214,7 +214,7 @@
       <td>
 		<div class="tooltip">?
           <span class="tooltiptext">Indicate whether the study is prospective 
-		  or retrospective and case/control or cohort, etc. In case of prospective studies, 
+		  or retrospective and case/control or cohort, etc. In the case of prospective studies, 
 		  provide registration details if available.</span>
         </div>
 		Study nature (e.g., retrospective, prospective)</td>
@@ -334,8 +334,8 @@
 		  Non-radiomic variables might be demographic characteristics (e.g., age, gender, ethnicity), 
 		  widely used traditional laboratory biomarkers (e.g., carcinoembryonic antigen), or traditional 
 		  approaches used in daily clinical practice (e.g., radiologist’s qualitative reading, Hounsfield Unit 
-		  evaluation, Response Evaluation Criteria in Solid Tumours (RECIST), Response Assessment in Neuro-Oncology 
-		  (RANO) criteria). It would be helpful to know how these predictors were identified (e.g., based on a literature review). 
+		  evaluation, Response Evaluation Criteria in Solid Tumours [RECIST], Response Assessment in Neuro-Oncology 
+		  [RANO] criteria). It would be helpful to know how these predictors were identified (e.g., based on a literature review). 
 		  If applicable, 
 		  describe any transformation of predictors (e.g., binarization of continuous predictors, the grouping of levels of categorical variables).</span>
         </div>
@@ -582,9 +582,8 @@
 		  assess the influence of segmentation differences. An intra- and inter-rater 
 		  reproducibility analysis must be considered in manual and semi-automatic methods. 
 		  Provide details about the statistical tests used for the reliability analysis (e.g., 
-		  intraclass 
-		  correlation coefficient along with types) [26]. Mention the independence of assessment. 
-		  Clearly state the analysis is performed using the training set.</span>
+		  intraclass correlation coefficient along with types) [26]. Mention the independence of assessment. 
+		  Clearly state the reliability analysis is performed using the training set only.</span>
         </div>
 	  Details of segmentation reliability analysis</td>
       <td><input type="checkbox" class="exclusive" data-linked="group31" ></td>
@@ -674,10 +673,10 @@
       <td>
 	  <div class="tooltip">?
           <span class="tooltiptext">Describe the method (e.g., directed acyclic graphs) 
-		  for the detection and removal of potential confounders (e.g., differences in tumour 
+		  for the detection of potential confounders (e.g., differences in tumour 
 		  size between cohorts, different image acquisition parameters such as slice thickness, 
-		  and differences in patient populations between primary and secondary hospitals). This should 
-		  be done both for input features and outcome variables [27, 28].</span>
+		  and differences in patient populations between primary and secondary hospitals) [27, 28]. 
+		  Please also describe how confounding was addressed (e.g., covariate adjustment). </span>
         </div>
 	  Handling of confounders</td>
       <td><input type="checkbox" class="exclusive" data-linked="group36" ></td>
@@ -719,7 +718,7 @@
 		  state if there are any differences among training, validation, internal 
 		  testing, and external testing datasets (e.g., different scanners, different 
 		  readers for segmentation, different ethnicity). Again, note that any test data 
-		  should only be used once for evaluation to prevent optimistic biases.</span>
+		  should only be used once for evaluation to prevent biased performance metric estimates.</span>
         </div>
 	  Testing technique (e.g., internal, external)</td>
       <td><input type="checkbox" class="exclusive" data-linked="group38" ></td>
@@ -766,8 +765,8 @@
       <td>
 	  <div class="tooltip">?
           <span class="tooltiptext">Specify the statistical software and version used. 
-		  Indicate which method was used for the comparison of the model performance such as the DeLong test 
-		  [32, 33], McNemar [34], or the Bayesian approach [35]. Provide a statistical threshold for the comparison 
+		  Indicate which method was used for the comparison of the model performance such as the DeLong's test 
+		  [32, 33], McNemar's test [34], or  Bayesian approaches [35]. Provide a statistical threshold for the comparison 
 		  (e.g., p<0.05) along with confidence intervals if applicable to the method or metric. 
 		  Also, state if multiplicity is considered and corrected when comparing multiple models 
 		  (e.g., p-value adjustment, Bonferroni correction, false-discovery rate). Report
@@ -775,7 +774,7 @@
 		  the operating point on the receiver operating characteristic [ROC] curve to 
 		  define the confusion matrix, cut-off values for defining strata in survival analysis).</span>
         </div>
-	  Statistical performance comparison (e.g., DeLong test)</td>
+	  Statistical performance comparison (e.g., DeLong's test)</td>
       <td><input type="checkbox" class="exclusive" data-linked="group41" ></td>
       <td><input type="checkbox" class="exclusive" data-linked="group41" ></td>
       <td><input type="checkbox" class="exclusive" data-linked="group41" ></td> 
