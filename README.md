@@ -10,7 +10,7 @@ https://clearchecklist.github.io/clear_checklist/CLEAR.html
 Burak Kocak, Bettina Baessler, Spyridon Bakas, Renato Cuocolo, Andrey Fedorov, Lena Maier-Hein, Nathaniel Mercaldo, Henning Müller, Fanny Orlhac, Daniel Pinto Dos Santos, Arnaldo Stanzione, Lorenzo Ugga, Alex Zwanenburg
 
 ## Publication ##
-Kocak B, Baessler B, Bakas S, Cuocolo R, Fedorov A, Maier-Hein L, Mercaldo N, Müller H, Orlhac F, Pinto Dos Santos D, Stanzione A, Ugga L, Zwanenburg A. CheckList for EvaluAtion of Radiomics research (CLEAR): a step-by-step reporting guideline for authors and reviewers endorsed by ESR and EuSoMII. Insights Imaging. 2023 May 4;14(1):75. doi: 10.1186/s13244-023-01415-8. PMID: 37142815; PMCID: PMC10160267.
+Kocak B, Baessler B, Bakas S, Cuocolo R, Fedorov A, Maier-Hein L, Mercaldo N, Müller H, Orlhac F, Pinto Dos Santos D, Stanzione A, Ugga L, Zwanenburg A. CheckList for EvaluAtion of Radiomics research (CLEAR): a step-by-step reporting guideline for authors and reviewers endorsed by ESR and EuSoMII. Insights Imaging. 2023 May 4;14(1):75. doi: [10.1186/s13244-023-01415-8](https://doi.org/10.1186/s13244-023-01415-8). PMID: [37142815](https://pubmed.ncbi.nlm.nih.gov/37142815/); PMCID: [PMC10160267](http://www.ncbi.nlm.nih.gov/pmc/articles/pmc10160267/).
 
 ## Purpose of Checklist ##
 We aimed to develop a single documentation standard for radiomics research that can guide authors and reviewers. 
